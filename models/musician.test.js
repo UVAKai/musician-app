@@ -16,7 +16,7 @@ describe('Test suite for Musician model', () => {
     expect(musician).toBeInstanceOf(Musician);
   });
 
-  test('Vertfy model get success case', () => {
+  test('Verify model get success case', () => {
     musician.getMusician('ella', (err, musician) => {
       expect(err).toBeNull();
       expect(musician).not.toBeNull();
@@ -26,7 +26,7 @@ describe('Test suite for Musician model', () => {
     });
   });
 
-  test('Vertfy model get error case - musician does not exist', () => {
+  test('Verify model get error case - musician does not exist', () => {
     musician.getMusician('xxx', (err, musician) => {
       expect(err).not.toBeNull();
       expect(err).toBe('Musician does not exist');
@@ -34,7 +34,7 @@ describe('Test suite for Musician model', () => {
     });
   });
 
-  test('Vertfy model put success case - NEW', () => {
+  test('Verify model put success case - NEW', () => {
     const newMusician = {
       firstName: "Ash",
       lastName: "Bowie",
@@ -46,7 +46,7 @@ describe('Test suite for Musician model', () => {
     });
   });
 
-  test('Vertfy model put success case - EXISTING', () => {
+  test('Verify model put success case - EXISTING', () => {
     const existingMusician = {
       firstName: 'Paul',
       lastName: 'McCartney',
@@ -58,7 +58,7 @@ describe('Test suite for Musician model', () => {
     });
   });
 
-  test('Vertfy model put error case - EXISTING', () => {
+  test('Verify model put error case - EXISTING', () => {
     const existingMusician = {
       firstName: 'Sir Paul',
       lastName: 'McCartney',
@@ -71,7 +71,7 @@ describe('Test suite for Musician model', () => {
     });
   });
 
-  test('Vertfy model put error case', () => {
+  test('Verify model put error case', () => {
     const newMusician = {
       firstName: "Ashley",
       lastName: "Bowie",
